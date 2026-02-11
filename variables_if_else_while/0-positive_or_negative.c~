@@ -1,0 +1,24 @@
+#include <stdlib.h>
+#include <time.h>
+
+/**
+ * main - This is a decription
+ *
+ * Return: 0.
+ */
+
+int main(void)
+{
+  int n;
+
+  srand(time(0));
+  n = rand() - RAND_MAX / 2;
+  if(n < 0){
+    printf("lu% is a negative\n", n)
+      } else if (n > 0){
+    printf("lu% is a postive\n", n)
+      } else {
+    printf("lu% is zero\n", n)
+      }
+  return (0);
+}
