@@ -2,14 +2,14 @@
 #include <stdio.h>
 
 /**
- * _islower - prints is lowercase
+ * _isalpha - prints is lowercase
  * @c: interger
  * Return: 0.
  */
 
 int _isalpha(int c)
 {
-	if (c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z')
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
 	{
 		return (1);
 	}
