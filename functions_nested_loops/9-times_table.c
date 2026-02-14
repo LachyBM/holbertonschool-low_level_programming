@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- *jack_bauer- print abs
+ *times_table- multi of 0x0 > 9x9 tables
  *
  * Return: 0.
  */
@@ -18,16 +18,20 @@ void times_table(void)
 		while (n2 <= 9)
 		{
 		int multi = n1 * n2;
-		
+
 		if (multi >= 10)
 		{
 			_putchar((multi / 10) + '0');
 			_putchar((multi % 10) + '0');
 		}
+		else if (n2 == 0)
+		{
+			_putchar(multi + '0');
+		}
 		else
 		{
 			_putchar(' ');
-			_putchar( multi + '0');
+			_putchar(multi + '0');
 		}
 		if (n2 < 9)
 		{
