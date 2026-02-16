@@ -2,7 +2,7 @@
 #include <stdio.h>
 
 /**
- *  print_square- prints multli
+ *  print_triangle- prints multli
  * @size: interger
  * Return: 0.
  */
@@ -18,7 +18,7 @@ void print_triangle(int size)
 
 	int x = 0;
 
-	while (size - (y+1) > x)
+	while (size - (y + 1) > x)
 	{
 		_putchar(' ');
 		x++;
