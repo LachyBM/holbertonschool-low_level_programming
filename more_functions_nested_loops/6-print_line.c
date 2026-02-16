@@ -9,7 +9,7 @@
 
 void print_line(int n)
 {
-	int x;
+	int x = 0;
 
 	if (n <= 0)
 	{
