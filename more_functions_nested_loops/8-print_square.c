@@ -9,7 +9,8 @@
 
 void print_square(int size)
 {
-
+	if (size <= 0)
+	{
 	int y = 0;
 
 	while (size > y)
@@ -24,5 +25,10 @@ void print_square(int size)
 	}
 	_putchar('\n');
 	y++;
+	}
+	}
+	else
+	{
+		_putchar('\n');
 	}
 }
