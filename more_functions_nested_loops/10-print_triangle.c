@@ -17,21 +17,19 @@ void print_triangle(int size)
 	{
 
 	int x = 0;
-	int ast = size - y;
 
-	while (size > x)
+	while (size - (y+1) > x)
 	{
-		_putchar('_');
+		_putchar(' ');
 		x++;
 	}
-	while (size > ast)
+	while (size > x)
 	{
 		_putchar('#');
-		ast++;
+		x++;
 	}
 	_putchar('\n');
 	y++;
-	ast = 0;
 	}
 	}
 	else
