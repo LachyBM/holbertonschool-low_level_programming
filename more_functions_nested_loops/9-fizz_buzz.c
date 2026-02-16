@@ -27,8 +27,15 @@ int main(void)
 	{
 		printf("%i", x);
 	}
+	if (x < 100)
+	{
 	printf(" ");
 	x++;
+	}
+	else
+	{
+		x++;
+	}
 	}
 	printf("\n");
 	return (0);
