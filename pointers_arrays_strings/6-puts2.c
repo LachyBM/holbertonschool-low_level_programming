@@ -18,13 +18,8 @@ void puts2(char *str)
 			char letter = str[length];
 
 			_putchar(letter);
-			length += 2;
 		}
-		else
-		{
-			break;
-		}
-
+			length++;
 	}
 	_putchar('\n');
 }
