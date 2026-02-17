@@ -16,7 +16,7 @@ void print_rev(char *s)
 		length++;
 	}
 
-	while (length > 0)
+	while (length >= 0)
 	{
 		char letter = s[length];
 
