@@ -10,20 +10,20 @@
 void rev_string(char *s)
 {
 	int length = 0;
+	int x  = 0;
+	char letter;
 
 	while (s[length] != '\0')
 	{
 		length++;
 	}
 
-	while (length >= 0)
+	while (x < length / 2)
 	{
-		char letter = s[length];
-		char 
 
-		printf("%c",letter);
-		length--;
-		i++;
+		letter = s[x];
+		s[x] = s[length - 1 - x];
+		s[length - 1 - x] = letter;
+		x++;
 	}
-	printf("\n");
 }
