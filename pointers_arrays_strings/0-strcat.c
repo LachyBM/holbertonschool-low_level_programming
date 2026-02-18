@@ -2,8 +2,10 @@
 #include "main.h"
 
 /**
- *
- * 
+ *_strcat- copy src to end of dest
+ *@src: appended word
+ *@dest: first word/combo
+ *Return: new combo
  */
 
 char *_strcat(char *dest, char *src)
@@ -13,7 +15,7 @@ char *_strcat(char *dest, char *src)
 
 	while (dest[length] != '\0')
 	{
-		length++;	
+		length++;
 	}
 
 	while (src[length2] != '\0')
