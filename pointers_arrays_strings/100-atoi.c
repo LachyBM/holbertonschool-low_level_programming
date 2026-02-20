@@ -39,8 +39,10 @@ int _atoi(char *s)
 	{
 		return (dig);
 	}
-	if (sign == -1)
+	else if (sign == -1)
 	{
 		return (-dig);
 	}
+
+	return 0;
 }
