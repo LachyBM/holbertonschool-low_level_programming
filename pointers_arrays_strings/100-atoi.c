@@ -44,5 +44,5 @@ int _atoi(char *s)
 		return (-dig);
 	}
 
-	return 0;
+	return (0);
 }
