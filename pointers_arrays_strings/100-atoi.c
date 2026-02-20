@@ -11,7 +11,7 @@ int _atoi(char *s)
 {
 	int length = 0;
 	int sign = 1;
-	int dig = 0;
+	unsigned int dig = 0;
 
 	while (s[length] != '\0')
 	{
@@ -35,5 +35,12 @@ int _atoi(char *s)
 		length++;
 	}
 
-	return (dig * sign);
+	if (sign == 1)
+	{
+		return (dig);
+	}
+	if (sign == -1)
+	{
+		return (-dig);
+	}
 }
