@@ -4,10 +4,36 @@
 /**
  * _atoi- converts a string to an int
  * @s: char
- * Return:
+ * Return: digit + sign
  */
 
 int _atoi(char *s)
 {
+	int length = 0;
+	int sign = 1;
+	int dig = 0;
 
+	while (s[length] != '\0')
+	{
+		if (s[length] == '+')
+		{
+		sign *= 1;
+		}
+		else if (s[length] == '-')
+		{
+			sign *= -1;
+		}
+
+		if ((s[length] >= '0' && s[length] <= '9'))
+		{
+			dig = dig * 10 + (s[length] -  '0');
+		}
+		else if (dig > 0)
+		{
+			break;
+		}
+		length++;
+	}
+
+	return (dig * sign);
 }
