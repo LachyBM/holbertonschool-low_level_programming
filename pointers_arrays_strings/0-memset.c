@@ -3,9 +3,10 @@
 
 /**
  * _memset- fills first n bytes of memory area to by s with sontant byte b
- * @s-char
- * @b -char
- * @n - unsigned int
+ * @s:char
+ * @b:char
+ * @n: unsigned int
+ * Return: s
  */
 
 char *_memset(char *s, char b, unsigned int n)
@@ -15,7 +16,7 @@ char *_memset(char *s, char b, unsigned int n)
 	while (n > i)
 		{
 		s[i] = b;
-		i++;	
+		i++;
 		}
 	return (s);
 }
