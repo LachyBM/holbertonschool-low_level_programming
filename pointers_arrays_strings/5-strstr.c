@@ -40,11 +40,7 @@ char *_strstr(char *s, char *accept)
 				}
 
 				if (x == length)
-				{
 					return (&s[i] - x);
-				}
-			}
-
 		}
 		else
 		{
