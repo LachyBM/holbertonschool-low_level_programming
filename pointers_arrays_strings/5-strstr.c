@@ -13,7 +13,7 @@ char *_strstr(char *s, char *accept)
 	int i = 0;
 	int length = 0;
 
-	if (*s == '\0')
+	if (*accept == '\0')
 		return(accept);
 
 	while (accept[length] != '\0')
