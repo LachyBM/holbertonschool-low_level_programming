@@ -14,7 +14,7 @@ char *_strstr(char *s, char *accept)
 	int length = 0;
 
 	if (*accept == '\0')
-		return(accept);
+		return(s);
 
 	while (accept[length] != '\0')
 	{
