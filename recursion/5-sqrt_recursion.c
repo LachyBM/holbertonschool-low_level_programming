@@ -2,9 +2,25 @@
 #include "main.h"
 
 /**
- * _sqrt_recursion- sqrt of a number
+ * helper- sqrt of a number
  * @n: int
+ * @check: int
  * Return: sqrt of number
+ */
+
+int helper(int n, int check)
+{
+	if (check * check == n)
+		return (check);
+	if (check * check > n)
+		return (-1);
+	return (helper(n, check + 1));
+}
+
+/**
+ * _sqrt_recursion- sqrt
+ * @n: int
+ * Return: sqrt
  */
 
 int _sqrt_recursion(int n)
@@ -13,10 +29,10 @@ int _sqrt_recursion(int n)
 	{
 		return (-1);
 	}
-	if (n == 0)
+	if (n == 0 || n == 1)
 	{
-		return (0);
+		return (n);
 	}
 
-	return (_sqrt_recursion(n - 1) / _sqrt_recursion(n - 1));
+	return (helper(n, 1));
 }
