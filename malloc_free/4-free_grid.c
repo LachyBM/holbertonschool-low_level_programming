@@ -3,25 +3,25 @@
 #include "main.h"
 
 /**
- * **alloc_grid- grid
- * @width: int width of grid
+ * **free_grid- grid
+ * @grid: grid
  * @height: int highet of grid
- * Return: grid with locations
+ * Return: if grid NULL
  */
 
 void free_grid(int **grid, int height)
 {
 
 	int i = 0;
-	
+
 	if (grid == NULL)
 		return;
 
 	while (i < height)
-		{
-			free(grid[i]);
-			i++;
-		}
+	{
+		free(grid[i]);
+		i++;
+	}
 
 	free(grid);
 }
