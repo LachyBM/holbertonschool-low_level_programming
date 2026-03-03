@@ -14,9 +14,9 @@
 char *string_nconcat(char *s1, char *s2, unsigned int n)
 {
 	unsigned int i = 0;
+	unsigned int x = 0;
 	unsigned int size = 0;
 	unsigned int size2 = 0;
-	unsigned int total = 0;
 	char *combo;
 
 	if (s1 == NULL)
@@ -25,38 +25,26 @@ char *string_nconcat(char *s1, char *s2, unsigned int n)
 		s2 = "";
 
 	while (s1[size] != '\0')
-	{
 		size++;
-	}
 	while (s2[size2] != '\0')
-	{
 		size2++;
-	}
-	total = size + size2;
+	if (n >= size2)
+		n = size2;
 
-	combo = malloc((total + 1)  * sizeof(char));
+	combo = malloc((size + n + 1)  * sizeof(char));
+
 	if (combo == NULL)
 		return (NULL);
-	if (n >= size2)
+	while (i < size)
 	{
-		combo[i] = s2[i];
+		combo[i] = s1[i];
 		i++;
 	}
-	else
+	while (x < n)
 	{
-		while (i < size)
-		{
-			combo[i] = s1[i];
-			i++;
-
-		}
-		i = 0;
-		while (i < n)
-		{
-			combo[size] = s2[i];
-			size++;
-			i++;
-		}
+		combo[i + x] = s2[x];
+		x++;
 	}
+
 	return (combo);
 }
