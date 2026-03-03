@@ -4,7 +4,7 @@
 
 /**
  * print_dog- int the dog
- * @dog: dog strust
+ * @d: dog strust
  */
 
 void print_dog(struct dog *d)
@@ -22,6 +22,5 @@ void print_dog(struct dog *d)
 	if (d->owner == NULL)
 		printf("Owner: (nil)\n");
 	else
-		printf("Owner: %s\n",d->owner);
-
+		printf("Owner: %s\n", d->owner);
 }
