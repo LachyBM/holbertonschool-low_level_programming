@@ -1,7 +1,23 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <string.h>
 #include "dog.h"
+
+/**
+ * _strlen - length of string
+ * @s: string
+ * Return: length of string
+ */
+
+int _strlen(char *s)
+{
+	int length = 0;
+
+	while (s[i] != '\0')
+	{
+		length++;
+	}
+	return (length);
+}
 
 /**
  * copy- int the copy
@@ -9,7 +25,6 @@
  * @src: dog copy loc
  * Return: copy
  */
-
 
 char *copy(char *dest, char *src)
 {
@@ -46,8 +61,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 	if (d == NULL)
 		return (NULL);
 
-	name_copy = malloc((strlen(name) + 1) * sizeof(char));
-	owner_copy = malloc((strlen(owner) + 1) * sizeof(char));
+	name_copy = malloc((_strlen(name) + 1) * sizeof(char));
+	owner_copy = malloc((_strlen(owner) + 1) * sizeof(char));
 
 	if (name_copy == NULL || owner_copy == NULL)
 	{
