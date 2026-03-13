@@ -1,10 +1,40 @@
 #include "3-calc.h"
+#include <stdio.h>
+#include <stdlib.h>
 
 /**
  * main-main
+ * @argc: arg count
+ * @argv: arg value
+ * Return:0 if pass
  */
 
-main()
+int main(int argc, char *argv[])
 {
+	int x, y;
+	int (*oper)(int, int);
 
+	if (argc != 4)
+	{
+		printf("error\n");
+		exit(100);
+	}
+
+	oper = get_op_func(argv[2]);
+	if (oper == NULL)
+	{
+		printf("error\n");
+		exit(101);
+	}
+
+	x = atoi(argv[1]);
+	y = atoi(argv[3]);
+
+	if (y == 0 && (argv[2][0] == '/' || argv[2][0] == '%'))
+	{
+		printf("error\n");
+		exit(102);
+	}
+	printf("%d\n", oper(x, y));
+	return (0);
 }
